@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeLson - Official | Portfolio of CodeLson</title>
+        <link rel="shortcut icon" href="Screenshot_20231010-192921_Chrome.jpg" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Ruge+Boogiedisplay=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="ttpf.png" type="image/x-icon">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap");
+            /*By Digital Dynamo*/
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', 'sans-serif';
+                scroll-behavior: smooth;
+            }n
+
+            body {
+                background-color: #1100ff;
+                color: #ededed;
+                overflow-wrap: break-word;
+            }
+
+            .header {
+                background: #081b29;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px 10%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 10000;
+                transition: .5s;
+            }
+
+            .logo img {
+                width: 100px;
+            }
+
+            .nav a {
+                text-decoration: none;
+                font-size: 25px;
+                color: #ededed;
+                font-weight: 500;
+                margin-left: 40px;
+                transition: .4s;
+            }
+
+            .nav a:hover, .nav a.active {
+                color: #00abf4;
+            }
+
+            .home {
+                display: flex;
+                align-items: center;
+                height: 100vh;
+                padding: 0 10%;
+            }
+            #home, #projects, #about, .header{
+                display: none;
+            }
+            #home{
+                background-color: #081b29; 
+            }
+            #about{
+                background-color: #081b29;
+                color: #ededed;
+            }
+
+            .home-content {
+                width: 800px;
+                line-height: 1.5;
+                letter-spacing: 1px;
+            }
+
+            .home-content h2 {
+                font-size: 56px;
+                color: #00abf4;
+            }
+
+            #profession {
+                font-size: 40px;
+                color: #ededed;
+            }
+
+            .p {
+                font-size: 25px;
+                color: #ededed;
+            }
+
+            .social {
+                position: absolute;
+                bottom: 40px;
+                width: 250px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .social a {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                border: 1px solid #00abf4;
+                border-radius: 50%;
+                font-size: 25px;
+                color: #00abf0;
+                text-decoration: none;
+                padding: 0%;
+                transition: 1s;
+                cursor: pointer;
+            }
+
+            .social a:hover {
+                background: #00abf4;
+                color: #081b29;
+            }
+
+            .buttons {
+                position: absolute;
+                bottom: 20%;
+            }
+
+            .btn {
+                background-color: #00abf4;
+                color: #000000;
+                padding: 10px 20px;
+                margin-right: 20px;
+                border: .5px solid #00abf0;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 18px;
+                transition: 1s;
+            }
+
+            .btn:hover {
+                background-color: #000000;
+                color: #00abf4;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            #menu-icon {
+                font-size: 3.6rem;
+                cursor: pointer;
+                display: none;
+            }
+
+            #projects {
+                background-color: #112e42;
+                padding: 100px 0;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #projects h1 {
+                text-align: center;
+                font-size: 60px;
+                color: #00abf4;
+                width: 100%;
+                margin: 20px;
+                margin-top: 40px;
+            }
+
+            .hr {
+                width: 40%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                padding: 10px 2%;
+            }
+
+            .display {
+                width: 320px;
+                height: 350px;
+                border: 1px solid #2f2a2a;
+                box-shadow: 0px 0px 30px #4b4949;
+                background: linear-gradient(45deg, #0a0a0a, #3a4452);
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                flex-direction: column;
+                margin-bottom: 50px;
+                margin-left:50px;
+            }
+
+            .display a {
+                text-decoration: none;
+            }
+
+            .display img {
+                width: 100%;
+                height: 210px;
+            }
+
+            .display h2 {
+                margin-top: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                color: #ffffff;
+                border-bottom: 2px solid #ffffff;
+            }
+
+            .display p {
+                margin-top: 5px;
+                font-size: 17px;
+                text-align: center;
+                color: #ffffff;
+            }
+
+            hr {
+                width: 80%;
+                color: #ffffff;
+            }
+
+            .about {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                gap: 20px;
+                flex-direction: column;
+                height: 100vh;
+                padding-bottom: 15px;
+            }
+
+            .about h2 {
+                font-size: 45px;
+            }
+
+            span {
+                color: #081b29;
+            }
+
+            .about-img {
+                position: relative;
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .about-img img {
+                width: 90%;
+                height: 90%;
+                border-radius: 50%;
+                border: 0.2rem solid #081b29;
+                animation: glow 2s linear infinite;
+                cursor: pointer;
+            }
+
+
+            .about-img .orbit {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(0);
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border-top: .2rem solid transparent;
+                border-bottom: .2rem solid transparent;
+                border-left: .2rem solid #0fc5c5;
+                border-right: .2rem solid #0fc5c5;
+                animation: orbit 8s linear infinite,
+                           change1 3s linear infinite;
+                transform-origin: center;
+
+            }
+
+            .about-img .orbit2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(0);
+                width: 110%;
+                height: 110%;
+                border-radius: 50%;
+                border-top: .2rem solid #0fc5c5;
+                border-bottom: .2rem solid #0fc5c5;
+                border-left: .2rem solid transparent;
+                border-right: .2rem solid transparent;
+                animation: orbit 8s linear infinite,
+                           change2 3s linear infinite;
+                transform-origin: center;
+
+            }
+                     
+            @keyframes glow {
+                0% {
+                    box-shadow: 0px 0px 0px;
+                }
+
+                10% {
+                    box-shadow: 0px 0px 5px;
+                }
+
+                20% {
+                    box-shadow: 0px 0px 10px;
+                }
+
+                40% {
+                    box-shadow: 0px 0px 15px;
+                }
+
+                60% {
+                    box-shadow: 0px 0px 20px;
+                }
+
+                80% {
+                    box-shadow: 0px 0px 15px;
+                }
+
+                90% {
+                    box-shadow: 0px 0px 10px;
+                }
+
+                100% {
+                    box-shadow: 0px 0px 5px;
+                }
+            }
+            @keyframes change1{
+
+                0%{
+                  border-left: .2rem solid #0fc5c5;
+                  border-right: .2rem solid #0fc5c5;
+                }
+                50%{
+                   border-left: .2rem solid #09e8a1;
+                   border-right: .2rem solid #09e8a1;
+
+                }
+                100%{
+                  border-left: .2rem solid #0fc5c5;
+                  border-right: .2rem solid #0fc5c5;
+                }
+            }
+                        
+            @keyframes change2{
+                0%{
+                border-top: .2rem solid #09e8a1;
+                border-bottom: .2rem solid #09e8a1;
+                }
+                50%{
+                border-top: .2rem solid #0fc5c5;
+                border-bottom: .2rem solid #0fc5c5;
+                }
+                100%{
+                border-top: .2rem solid #09e8a1;
+                border-bottom: .2rem solid #09e8a1;
+                }
+            }
+
+            @keyframes orbit {
+                100% {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+            }
+
+            .about-content {
+                width: 80%;
+                margin-bottom: 10px;
+                padding-bottom: 0px;
+                line-height: 35px;
+            }
+            .intro{
+                text-align: center;
+            }
+
+            .about-content h3 {
+                text-align: center;
+                width: 100%;
+                position: relative;
+                display: inline-block;
+                font-size: 40px;
+                color: #00abf4;
+            }
+
+            .about-content p {
+                position: relative;
+                font-size: 25px;
+            }
+            .expertise li{
+                font-size: 20px;
+            }
+
+            .scroll-nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                border: .5px solid #ededed;
+                width:80%;
+                padding: 7px;
+            }
+
+            .scroll {
+                background: transparent;
+                border: none;
+                color: #ededed;
+                font-size: 30px;
+                border-radius: 50%;
+                cursor: pointer;
+                width: 33px;
+                height: 33px;
+                transition: .5s;
+            }
+            .about-content a{
+                color: #3d8baa;
+                font-size: 20px;
+            }
+            .about-content a:hover{
+                text-decoration: underline;
+                color: #00abf4;
+            }
+
+            .scroll:hover {
+                background: #88cfeb;
+                color: #171e24;
+            }
+
+            #contentnumber {
+                color: #ededed;
+                font-size: 25px;
+            }
+            .wrapper {
+                background-color: #081b29; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            svg {
+                font-family: "Ruge Boogie", sans-serif;
+                width: 100%;
+                height: 100%;
+            }
+            
+            svg text {
+                animation: stroke 5s 1 alternate;
+                stroke-width: 2;
+                stroke: #24bae4;
+                font-size: 100px;
+                white-space: pre-line;
+            }
+            @keyframes stroke {
+                0% {
+                    fill: transparent;
+                    stroke: rgba(54, 95, 160, 1);
+                    stroke-dashoffset: 30%;
+                    stroke-dasharray: 0 40%;
+                    stroke-width: 0;
+                    opacity: 1;
+                }
+                70% {
+                    fill: transparent;
+                    stroke: rgba(72, 138, 204, 1);
+                    opacity: 1;
+                }
+                80% {
+                    fill:transparent;
+                    stroke: rgba(72, 138, 204, 1);
+                    stroke-width: 2;
+                    opacity: 1;
+                }
+                95%{
+                    fill: #00abf4;
+                    opacity: 1;
+
+                }
+                99% {
+                    fill: transparent;
+                    stroke: rgba(72, 138, 204, 1);
+                    stroke-dashoffset: -21%;
+                    stroke-dasharray: 40% 0;
+                    stroke-width: 2;
+                    opacity: 0.8;
+                }
+                100%{
+                    stroke-width: 0;
+                    opacity: 0.2;
+                }
+            }
+            
+
+            
+
+
+
+
+            @media screen and (max-width: 900px) {
+                .home-content h2 {
+                    font-size: 40px;
+                }
+
+                #profession {
+                    font-size: 30px;
+                }
+
+                .home-content p {
+                    font-size: 18px;
+                }
+
+                .logo img {
+                    width: 45px;
+                }
+
+                #menu-icon {
+                    display: block;
+                    color: #ededed;
+                }
+
+                .buttons {
+                    bottom: 23%;
+                }
+
+                .nav {
+                    position: absolute;
+                    top: 100%;
+                    left: -100%;
+                    width: 100%;
+                    padding: 1rem 4%;
+                    background: #171e24;
+                    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+                    z-index: 100;
+                    transition: .25s ease;
+                    transition-delay: .25s;
+                }
+
+                .nav.active {
+                    left: 0;
+                    transition-delay: 0s;
+                }
+
+                .navbar .active-nav {
+                    position: absolute;
+                    top: 0;
+                    left: -125%;
+                    width: 100%;
+                    height: 100%;
+                    background: #081b29;
+                    z-index: -1;
+                    border-top: .1rem solid rgba(0, 0, 0, .2);
+                    transition: .25s ease;
+                    transition-delay: 0s;
+                }
+
+                .nav.active .active-nav {
+                    left: 0;
+                    transition-delay: .25s;
+                }
+
+                .nav a {
+                    display: block;
+                    font-size: 1.7rem;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    transform: translateX(-20rem);
+                    transition-delay: 0s;
+                    padding: 25px;
+                }
+
+                .nav a:hover {
+                    background: #314251 ;
+                }
+
+                .nav.active a {
+                    transform: translateX(0);
+                    transition-delay: .25s;
+                }
+                #projects h1{
+                    font-size: 40px;
+                }
+
+                .container {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px;
+                    padding: 10px 2%;
+                }
+
+                .display {
+                    width: 80%;
+                    height: auto;
+                    margin-left: 10%;
+                    box-shadow: 0px 0px 15px #4b4949;
+                    margin-bottom: 70px;
+                }
+
+                .display img {
+                    height: 120px;
+                }
+
+                .display h2 {
+                    font-size: 16px;
+                }
+
+                .display p {
+                    font-size: 14px;
+                }
+                .about{
+                    padding: 2px;
+                }
+                .about h2{
+                    font-size: 35px;
+                }
+                .about-content a{
+                    font-size: 15px;
+                }
+
+                .about-content h3 {
+                    font-size: 30px;
+                }
+                .expertise li{
+                    font-size: 18px;
+                }
+
+                .about-content p {
+                    font-size: 18px;
+                }
+
+                .about-content {
+                    line-height: 25px;
+                    width: 90%
+                }
+                .about-img img {
+                    width: 65%;
+                    height: 65%;
+                }
+
+                .about-img .orbit {
+                    width: 75%;
+                    height: 75%;
+                }
+
+                .about-img .orbit2 {
+                    width: 80%;
+                    height: 80%;
+                }
+                svg text{
+                    font-size: 50px;
+                }
+            }
+
+            @media screen and (max-width: 470px) {
+                .home-content h2 {
+                    font-size: 30px;
+                }
+                .home-content{
+                    letter-spacing: .0px;
+                    line-height: 1.3;
+                }
+
+                #profession {
+                    font-size: 25px;
+                }
+
+                .p {
+                    font-size: 10px;
+                }
+                .buttons{
+                    bottom:35%;
+                }
+
+                .logo img {
+                    width: 80px;
+                }
+
+                #menu-icon {
+                    display: block;
+                    font-size: 3.2rem;
+                }
+
+                .social {
+                    width: 200px;
+                }
+
+                .social a {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 25px;
+                }
+
+                .buttons {
+                    bottom: 25%;
+                }
+
+                .header {
+                    padding: 5px 5%;
+                }
+                #projects{
+                    padding:50px 5px;
+                }
+
+                .container {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 8px;
+                }
+
+                .hr {
+                    width: 80%;
+                }
+
+                .display {
+                    width: 75%;
+                    height: auto;
+                    margin-left: 5%;
+                    box-shadow: 0px 0px 10px #4b4949;
+                    margin-bottom: 50px;
+                }
+
+                .display img {
+                    height: 80px;
+                }
+
+                .display h2 {
+                    font-size: 10px;
+                }
+
+                .display p {
+                    font-size: 8px;
+                }
+                .about{
+                    padding-bottom: 5px;
+                    gap: 1px;
+
+                }
+                .about h2{
+                    font-size: 30px;
+                }
+                .about-content h3 {
+                    font-size: 25px;
+                }
+                
+
+                .about-content p {
+                    font-size: 16px;
+                }
+                .expertise li{
+                    font-size: 16px;
+                }
+
+                .about-content {
+                    width: 85%;
+                    line-height: 20px;
+                }
+
+                .about-img img {
+                    width: 50%;
+                    height: 50%;
+                }
+
+                .about-img .orbit {
+                    width: 60%;
+                    height: 60%;
+                }
+
+                .about-img .orbit2 {
+                    width: 65%;
+                    height: 65%;
+                }
+
+                .nav {
+                    padding: .7rem 2%;
+                }
+
+                .nav a {
+                    font-size: 1.2rem;
+                    padding: 15px;
+                }
+                svg text{
+                    font-size: 40px;
+                }
+                @keyframes stroke {
+                0% {
+                    fill: transparent;
+                    stroke: rgba(54, 95, 160, 1);
+                    stroke-dashoffset: 30%;
+                    stroke-dasharray: 0 40%;
+                    stroke-width: 0;
+                    opacity: 1;
+                }
+                70% {
+                    fill: transparent;
+                    stroke: rgba(72, 138, 204, 1);
+                    opacity: 1;
+                }
+                80% {
+                    fill:transparent;
+                    stroke: rgba(72, 138, 204, 1);
+                    stroke-width: 2;
+                    opacity: 1;
+                }
+                95%{
+                    fill: #00abf4;
+                    opacity: 1;
+
+                }
+                99% {
+                    fill: transparent;
+                    stroke: rgba(72, 138, 204, 1);
+                    stroke-dashoffset: -21%;
+                    stroke-dasharray: 40% 0;
+                    stroke-width: 2;
+                    opacity: 0.8;
+                }
+                100%{
+                    stroke-width: 0;
+                    opacity: 0.2;
+                }
+            }
+            }
+            #home, #projects, #about, .header{
+                display: none;
+            }
+
+            
+        </style>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!--intro animation*!-->
+        <div class="wrapper">
+            <svg>
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="text">
+                    CODE
+                    LSON
+                </text>
+            </svg>
+        </div>
+
+        <!--header-->
+        <div class="header">
+            <a href="#home" class="logo"> 
+            <img src="Screenshot_20231010-192921_Chrome.jpg" alt="Digital Dynamo">
+            </a>  
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <nav class="nav">
+                <a href="#home" class="active">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#">Contact</a>
+                <a href="#about">About</a>
+                <span class="active-nav"></span>
+            </nav>
+        </div>
+
+        <!--main contents-->
+
+        <!--home conetents-->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h2>Hi! I am Lson.</h2>
+                <h3>
+                    <span id="profession"></span>
+                </h3>
+                <p class="p">Hi! My name is Lson Rizal. I am a student learning about computer science and web developing. Hoping to Become a Successful ML Engineer( AI Engineer) . I Never  Gonna Give Up on my dreams ! </p>
+            </div>
+            <div class="buttons">
+                <a href="https://">
+                    <button class="btn">Hire me!</button>
+                </a>
+                <a href="">
+                    <button class="btn">Contact!</button>
+                </a>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=100059016438015">
+                    <i class='bx bxl-facebook-circle'></i>
+                </a>
+                <a href="https://github.com/CodeLson">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-tiktok'></i>
+                </a>
+                <a href="#">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+            </div>
+        </section>
+        
+        <!--projects content-->
+        <section id="projects">
+            <h1>Projects</h1>
+            <hr class="hr">
+            <div class="container">
+           <!--   <div class="display">
+                    <a href="https://digital-dynamo38.github.io/watch/">
+                        <img src="watch.png" alt="Clock">
+                        <h2>Analog and digital watch</h2>
+                        <p>Analog and Digital watch using HTML, CSS &JS.</p>
+                    </a>
+                </div>  -->
+            <!--    <div class="display">
+                    <a href="https://digital-dynamo38.github.io/watch/stopwatch.html">
+                        <img src="timer.png" alt="Clock">
+                        <h2>Stopwatch</h2>
+                        <p>A functional stopwatch using HTML, CSS &JS.</p>
+                    </a>
+                </div>  -->
+                <div class="display">
+                    <a href="https://digital-dynamo38.github.io/calculator/">
+                        <img src="currency.jpg" alt="calculator">
+                        <h2>xConverter - Currency Converter</h2>
+                        <p>Convert Any Currency Into any Currency Using My xConverter.</p>
+                    </a>
+                </div>
+         <!--       <div class="display">
+                    <a href="https://digital-dynamo38.github.io/anime-stream.to/">
+                        <img src="anime.png" alt="anime-stream">
+                        <h2>Anime-streaming site</h2>
+                        <p>Anime-streaming site with side Navigation bar and loading animation.</p>
+                    </a>
+                </div>  -->
+                <div class="display">
+                    <a href="https:">
+                        <img src="Screenshot_20231010-194000_TrebEdit.jpg" alt="Facebook clone">
+                        <h2>Facebook Login Clone</h2>
+                        <p> Just Created a Simple Copy of Facebook Login Page! To Practice My HTML CSS. You Know Making Clones are the best way to Practice </p>
+                    </a>
+                </div>
+                <div class="display">
+                    <a href="https://digital-dynamo38.github.io/anime-stream.to/signup.html">
+                        <img src="manager.jpg" alt="Sign-Up">
+                        <h2>iPass - Password Manager</h2>
+                        <p>Keep Your Passwords Safe With my Password Manager </p>
+                    </a>
+                </div>
+             <!--   <div class="display">
+                    <a href="https://digital-dynamo38.github.io/chess/">
+                        <img src="chess.png" alt="Chess">
+                        <h2>Chess</h2>
+                        <p>Chess interface with only HTML and CSS.</p>
+                    </a>
+                </div>
+            -->     <div class="display">
+                    <a href="">
+                        <img src="password.jpg" alt="love calculator">
+                        <h2>Random Password Generator</h2>
+                        <p>Create a Strong Password! Using My pGenerator! Noone can Havk your Password . </p>
+                    </a>  -->
+                </div>
+             <!--   <div class="display">
+                    <a href="https://digital-dynamo38.github.io/proposal/">
+                        <img src="password.jpg" alt="love calculator">
+                        <h2>Love Letter</h2>
+                        <p>A complex love letter locked with a pin code using HTML, CSS &JS.</p>
+                    </a>  -->
+                </div>
+            </div>
+        </section>
+
+        <!--about contents-->
+        <section class="about" id="about">
+            <h2>About Me!</h2>
+            <div class="about-img">
+                <img src="pfp.jpg" alt="me">
+                <span class="orbit"></span>
+                <span class="orbit2"></span>
+            </div>
+            <div class="about-content intro" id="section1">
+                <h3>Introduction</h3>
+                <p>Hey, I'm Lson Rizal, and I'm a computer science student with a passion for web development and graphic design. Coding and design have become my creative outlets, allowing me to turn ideas into realitiy.
+                Beyond that, I'm also a music enthusiast, and anime/movies enjoyer.I also have a hobby of writing poems and songs. These hobbies provide a comforting break from stress and work, allowing me to create more creative ideas. <a href="">read more.....</a></p>
+            </div>
+            <div class="about-content expertise" id="section2">
+                <h3>Expertise</h3>
+                <p>I take pride in my expertise. Here's a glimpse of what I can offer:</p>
+                <ul>
+                    <li><strong>Web Development:</strong> I specialize in crafting responsive and user-friendly websites using HTML, CSS, and JavaScript. From simple static sites to dynamic web applications, I bring ideas to life on the web.</li>
+                    <li><strong>App Development:</strong> My skills extend to mobile app development, allowing me to create versatile and engaging apps that run smoothly on various platforms. <a href="">read more.....</a></li>
+                </ul>
+            </div>     
+            <div class="about-content experience" id="section3">
+                <h3>Experience</h3>
+                <p>I started this coding journey in mid 2022. And In just 1.5 years, I've made significant strides in web development.
+                   I've gained proficiency in HTML, CSS, and JavaScript, allowing me to create functional websites.
+                    I've also explored C, C++, and Python.
+                     While I acknowledge that there's much more to learn, my journey so far exemplifies the power of dedication and continuous learning.
+                      I remain humble and eager to grow further in this dynamic field.
+                      <a href="">read more.....</a>
+                </p>
+            </div>       
+            <div class="scroll-nav">
+                <button class="scroll pre" id="prevSectionBtn" disabled>&lt;</button>
+                <span id="contentnumber">1</span>
+                <button class="scroll next" id="nextSectionBtn">&gt;</button>
+            </div>
+        </section>
+
+        
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script><!--js for typing animation-->
+        <script>
+
+            /*js for typing animation*/ 
+            let typed = new Typed('#profession',{
+                strings: ['<i>Web Developer </i>', '<i>App Developer</i>', '<i>Designer</i>', '<i>Freelancer</i>'],
+                typeSpeed: 100,
+                backSpeed: 50,
+                backDelay: 200,
+                startDelay: 300,
+                loop: true
+            });
+
+            //js for toogling the active class and opening & closing of menu bar
+            let menuIcon = document.querySelector('#menu-icon');
+            let navbar = document.querySelector('.nav');
+
+            menuIcon.onclick = ()=>{
+                menuIcon.classList.toggle('bx-x');
+                navbar.classList.toggle('active');
+            }
+
+            function closeNavMenu() {
+                menuIcon.classList.remove('bx-x');
+                navbar.classList.remove('active');
+            }
+
+            let navLinks = document.querySelectorAll('.header .nav a');
+
+            navLinks.forEach((link)=>{
+                link.addEventListener('click', closeNavMenu);
+            }
+            );
+            let sections = document.querySelectorAll('section');
+            window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 100;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('.header .nav a[href*=' + id + ']').classList.add('active');
+                    });
+                }
+            });
+        }          
+        closeNavMenu();
+            
+        //js for changing the page of the about setion
+            const prevSectionBtn = document.getElementById("prevSectionBtn");
+            const nextSectionBtn = document.getElementById("nextSectionBtn");
+            const contentNumber = document.getElementById("contentnumber");
+            const contentSections = document.querySelectorAll(".about-content");
+            let currentSectionIndex = 0;
+
+            function showCurrentSection() {
+                contentSections.forEach((contentSection,index)=>{
+                    if (index === currentSectionIndex) {
+                        contentSection.style.display = "block";
+                    } else {
+                        contentSection.style.display = "none";
+                    }
+                }
+                );
+
+                prevSectionBtn.disabled = currentSectionIndex === 0;
+                nextSectionBtn.disabled = currentSectionIndex === contentSections.length - 1;
+
+                contentNumber.textContent = (currentSectionIndex + 1).toString();
+            }
+
+            nextSectionBtn.addEventListener("click", ()=>{
+                if (currentSectionIndex < contentSections.length - 1) {
+                    currentSectionIndex++;
+                    showCurrentSection();
+                }
+            }
+            );
+
+            prevSectionBtn.addEventListener("click", ()=>{
+                if (currentSectionIndex > 0) {
+                    currentSectionIndex--;
+                    showCurrentSection();
+                }
+            }
+            );
+
+            showCurrentSection();
+
+            /*INTRO ANIMATION JS*/
+            
+            const animationContainer = document.querySelector('.wrapper');
+            const animationText = document.querySelector('.text');
+            
+            animationText.addEventListener('animationend', () => {
+              animationContainer.remove();
+              
+              let home = document.getElementById('home');
+              let projects = document.getElementById('projects');
+              let about = document.getElementById('about');
+              let header = document.querySelector('.header');
+
+              home.style.display= 'flex';
+              projects.style.display= 'flex';
+              header.style.display= 'flex';
+              about.style.display= 'flex';
+            });
+
+        </script>
+    </body>
+</html>
